@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习资源网站</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #50c878;
+            --background-color: #f0f4f8;
+            --text-color: #333;
+            --card-background: #ffffff;
+            --nav-background: #2c3e50;
+            --section-background: #f5f5f5;
+            --subheading-color: #666;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        nav {
+            background-color: var(--nav-background);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5em;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 3em;
+            margin: 40px 0;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .category {
+            background-color: var(--card-background);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .category:hover {
+            transform: scale(1.05);
+        }
+
+        .category h2 {
+            background-color: var(--primary-color);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .section-content {
+            padding: 10px;
+        }
+
+        .section-content .section {
+            background-color: var(--section-background);
+            padding: 10px;
+        }
+
+        .section-content .section h3 {
+            color: var(--primary-color);
+            margin: 0;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .section-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .section-content li {
+            padding: 15px 20px;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+
+        .section-content li:not(:last-child) {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .section-content li:hover {
+            background-color: #f5f5f5;
+        }
+
+        .section-content li .content {
+            display: block;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .section-content li:hover .content {
+            transform: translateX(10px);
+        }
+
+        .section-content li:not(:hover) .content {
+            transform: translateX(0);
+        }
+
+        .section-content a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.4s ease;
+            display: block;
+        }
+
+        .section-content a:hover {
+            color: var(--secondary-color);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .category h2 {
+                font-size: 1.3em;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">学习资源</a>
+            <ul class="nav-links">
+                <li><a href="#machine-learning">机器学习</a></li>
+                <li><a href="#deep-learning">深度学习</a></li>
+                <li><a href="#math-analysis">数学分析</a></li>
+                <li><a href="#algorithms">算法题</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>优质学习资源集锦</h1>
+
+        <div class="categories">
+            <div id="machine-learning" class="category">
+                <h2>机器学习</h2>
+                <div class="section-content">
+                    <div class="section">
+                        <h3>视频</h3>
+                        <ul>
+                            <li><a href="https://www.bilibili.com/video/BV1Bq421A74G/?spm_id_from=333.337.search-card.all.click&vd_source=e5a8200d0a67b02dca62b3a3bbe3d33a" class="content">机器学习 - 吴恩达</a></li>
+                            <li><a href="https://www.bilibili.com/video/BV1PN4y1V7d9/?spm_id_from=333.337.search-card.all.click&vd_source=e5a8200d0a67b02dca62b3a3bbe3d33a" class="content">b站同济大佬</a></li>
+                            <li><a href="https://www.coursera.org/learn/machine-learning/home/week/1" class="content">机器学习课程 - Coursera</a></li>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <h3>学习资料</h3>
+                        <ul>
+                            <li><a href="https://www.processon.com/mindmap/66b48889fb35b76d02d13ae5" class="content">机器学习学习路线</a></li>
+                            <li><a href="https://github.com/fengdu78/lihang-code" class="content">李航《统计学习方法》- GitHub</a></li>
+                            <li><a href="https://www.cnblogs.com/pinard/category/894692.html" class="content">刘建平机器学习 - 博客园</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="deep-learning" class="category">
+                <h2>深度学习</h2>
+                <div class="section-content">
+                    <div class="section">
+                        <h3>视频</h3>
+                        <ul>
+                            <li><a href="https://www.bilibili.com/video/BV1wM4m117mp/?spm_id_from=333.337.search-card.all.click&vd_source=e5a8200d0a67b02dca62b3a3bbe3d33a" class="content">李沐深度学习</a></li>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <h3>学习资料</h3>
+                        <ul>
+                            <li><a href="https://zh-v1.d2l.ai/d2l-zh.pdf" class="content">深度学习pdf1</a></li>
+                            <li><a href="https://zh-v2.d2l.ai/d2l-zh.pdf" class="content">深度学习pdf2</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="math-analysis" class="category">
+                <h2>数学分析</h2>
+                <div class="section-content">
+                    <div class="section">
+                        <h3>视频</h3>
+                        <!-- 视频链接可以添加在这里 -->
+                    </div>
+                    <div class="section">
+                        <h3>学习资料</h3>
+                        <ul>
+                            <li><a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/" class="content">MIT OpenCourseWare - 单变量微积分</a></li>
+                            <li><a href="https://www.khanacademy.org/math/multivariable-calculus" class="content">Khan Academy - 多变量微积分</a></li>
+                            <li><a href="https://www.3blue1brown.com/" class="content">3Blue1Brown - 数学可视化</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="algorithms" class="category">
+                <h2>算法题</h2>
+                <div class="section-content">
+                    <div class="section">
+                        <h3>视频</h3>
+                        <!-- 视频链接可以添加在这里 -->
+                    </div>
+                    <div class="section">
+                        <h3>学习资料</h3>
+                        <ul>
+                            <li><a href="https://leetcode.com/" class="content">LeetCode</a></li>
+                            <li><a href="https://www.hackerrank.com/" class="content">HackerRank</a></li>
+                            <li><a href="https://codeforces.com/" class="content">Codeforces</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
